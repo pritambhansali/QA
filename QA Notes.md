@@ -20,7 +20,9 @@ public class HelloWorld {
 		chromeDriver.get("https://rahulshettyacademy.com/locatorspractice/");
 //		System.out.println(chromeDriver.getTitle());
 //		System.out.println(chromeDriver.getCurrentUrl());
+
 //		https://rahulshettyacademy.com/locatorspractice/
+
 
 		/* ****** IMPLICIT WAIT ****** */
 		chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -121,7 +123,6 @@ public class HelloWorld {
 
 	}
 }
-
 `
 ---
 
@@ -155,11 +156,10 @@ public class BrowserNavigation {
 		webDriver.quit();
 	}
 }
-
 `
 ---
-`
-		ChromeOptions options = new ChromeOptions();
+
+`ChromeOptions options = new ChromeOptions();
 
 		Map<String, Object> prefs = new HashMap<String, Object>();
 
@@ -176,5 +176,4 @@ public class BrowserNavigation {
 		WebDriver webDriver = DriverFactory.getChromeDriver(options);
 
 		webDriver.get("http://www.spicejet.com");
-
 `
