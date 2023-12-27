@@ -118,6 +118,21 @@ public class HelloWorld {
 		 * 
 		 */
 		
+		/* 
+		 * Session 47
+		 * Traversing to the Parent
+		 * //header/div/button[1]/parent::div
+		 * 
+		 * Traversing to the Grand Parent
+		 * //header/div/button[1]/parent::div/parent::header
+		 * 
+		 * Traversion to the Grand Parent's child
+		 * //header/div/button[1]/parent::div/parent::header/a
+		 * 
+		 * This backword traversal is not possible in CSS Locator strategy.
+		 * Its only possible in XPATH
+		 *  
+		 */
 		
 		
 
@@ -209,3 +224,4 @@ public class BrowserNavigation {
 		webDriver.quit();
 `
 ---
+Try accessing the the elements 
