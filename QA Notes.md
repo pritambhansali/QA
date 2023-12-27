@@ -177,3 +177,34 @@ public class BrowserNavigation {
 
 		webDriver.get("http://www.spicejet.com");
 `
+---
+`
+//	//*[@id="yDmH0d"]/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
+//	/html/body/div/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
+//	#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc > div.QlyBfb > button
+//	document.querySelector("#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc > div.QlyBfb > button")
+`
+---
+`
+		WebDriver webDriver = DriverFactory.getChromeDriver();
+
+		webDriver.get("http://www.google.com");
+		Thread.sleep(3000);
+		WebElement webElement = webDriver.findElement(By.xpath("//iframe[@role='presentation']"));
+		webDriver.switchTo().frame(webElement);
+
+		webDriver.findElement(By.xpath("//html/body/div/c-wiz/div/div/c-wiz/div/div/div/div/div/button")).click();
+
+		/*	//*[@id="yDmH0d"]/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
+		*	We can also select the above relative path or below Absolute path
+		*	//html/body/div/c-wiz/div/div/c-wiz/div/div/div/div/div/button
+		*/
+		webDriver.switchTo().defaultContent();
+
+		webDriver.findElement(By.xpath("//textarea[@jsname='yZiJbe']")).sendKeys("Pritam Bhansali", Keys.ENTER);
+		//webDriver.findElement(By.xpath("//*[@id='c7mM1c']/div[1]/span']")).click();
+		////*[@id="Alh6id"]/div[1]/div
+		// //*[@id="c7mM1c"]/div[1]/span
+		Thread.sleep(20000);
+		webDriver.quit();
+`
