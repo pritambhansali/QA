@@ -152,11 +152,6 @@ public class BrowserNavigation {
 
 	public static void main(String[] args) throws Exception {
 
-		/*
-		 * new
-		 * URL("magnet:?xt=urn:btih:ab4a7f102224c9e7d99e8c9f8a2f59f80325a68a&dn=www.5MovieRulz.top - Salaar Cease Fire – Part 1 (2023) 720p Hindi DVDScr x264 AAC 1.6GB.mkv&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fmovies.zsw.ca%3A6969%2Fannounce"
-		 * );
-		 */
 
 		/* ****** GET DRIVER ****** */
 		WebDriver webDriver = DriverFactory.getChromeDriver();
