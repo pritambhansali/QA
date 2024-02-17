@@ -220,3 +220,65 @@ public class BrowserNavigation {
 `
 ---
 Try accessing the the elements 
+
+`
+public class SynchronizationPract2 {
+
+      public static void main(String[] args) throws InterruptedException {
+
+            // System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
+
+            WebDriver driver = DriverFactory.getChromeDriver();
+
+            List<String> itemsNeeded = new ArrayList<>();
+            itemsNeeded.add("Tomato");
+            itemsNeeded.add("Cucumber");
+            itemsNeeded.add("Beetroot");
+
+            driver.get("https://rahulshettyacademy.com/seleniumPractise/");
+
+            Thread.sleep(3000);
+
+            List<WebElement> h4ProdnameList = driver.findElements(By.cssSelector("h4[class='product-name']"));
+            for (int i = 0; i < h4ProdnameList.size(); i++) {
+                  WebElement h4Prodname = h4ProdnameList.get(i);
+                  String productName = h4Prodname.getText().split("-")[0].trim();
+
+                  if (productName.equalsIgnoreCase("Tomato") || productName.equalsIgnoreCase("Mushroom")) {
+                        driver.findElements(By.xpath("//div[@class='product-action']/button")).get(i).click();
+                  }
+            }
+            
+            driver.findElement(By.cssSelector("a.cart-icon")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//button[text()='PROCEED TO CHECKOUT']")).click();
+            /*
+             * Implicit wait is applied on global level.
+             * */
+            driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(2));
+            driver.findElement(By.cssSelector("input[class = 'promoCode']")).sendKeys("rahulshettyacademy");
+            driver.findElement(By.cssSelector("button[class = 'promoBtn']")).click();
+            
+            
+            /*
+             * Explicit wait is applied on the element level.
+             * */
+            WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofMinutes(2));
+            
+            explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(null)));
+            
+//          for (WebElement h4Prodname : h4ProdnameList) {
+//                String productName = h4Prodname.getText().split("-")[0].trim();
+//
+//                if (productName.equalsIgnoreCase("Tomato") || productName.equalsIgnoreCase("Mushroom")) {
+//                      driver.findElement(By.xpath("//div[@class='product-action']/button")).click();
+//                }
+//          }
+            Thread.sleep(20000);
+            driver.quit();
+
+      }
+
+}
+
+`
