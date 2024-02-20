@@ -166,10 +166,12 @@ public class BrowserNavigation {
 		webDriver.quit();
 	}
 }
+
 `
 ---
 
-`ChromeOptions options = new ChromeOptions();
+`
+		ChromeOptions options = new ChromeOptions();
 
 		Map<String, Object> prefs = new HashMap<String, Object>();
 
@@ -188,14 +190,17 @@ public class BrowserNavigation {
 		webDriver.get("http://www.spicejet.com");
 `
 ---
+
 `
 //	*[@id="yDmH0d"]/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
 //	/html/body/div/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
 //	#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc > div.QlyBfb > button
 //	document.querySelector("#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc >
 //      div.QlyBfb > button")
+
 `
 ---
+
 `
 		WebDriver webDriver = DriverFactory.getChromeDriver();
 
@@ -218,8 +223,11 @@ public class BrowserNavigation {
 		// //*[@id="c7mM1c"]/div[1]/span
 		Thread.sleep(20000);
 		webDriver.quit();
+  
 `
+
 ---
+
 Try accessing the the elements 
 
 `
