@@ -189,10 +189,11 @@ public class BrowserNavigation {
 `
 ---
 `
-//	//*[@id="yDmH0d"]/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
+//	*[@id="yDmH0d"]/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
 //	/html/body/div/c-wiz/div/div/c-wiz/div/div/div/div[2]/div[2]/button
 //	#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc > div.QlyBfb > button
-//	document.querySelector("#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc > div.QlyBfb > button")
+//	document.querySelector("#yDmH0d > c-wiz > div > div > c-wiz > div > div > div > div.DRc6kd.bdn4dc >
+//      div.QlyBfb > button")
 `
 ---
 `
